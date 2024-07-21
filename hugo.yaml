@@ -1,0 +1,55 @@
+baseURL: 
+languageCode: en-us
+title: Stauntonel blog
+
+theme: PaperMod
+
+permalinks:
+  notes: /notes/:slug
+  posts: /posts/:year/:slug/
+
+menu:
+  main:
+    - identifier: search
+      name: zoek
+      url: /search
+      weight: 10
+    - identifier: categories
+      name: categorie
+      url: /categories
+      weight: 20
+    - identifier: tags
+      name: tag
+      url: /tags
+      weight: 30
+    - identifier: archives
+      name: archief
+      url: /archives
+      weight: 40
+
+
+params:
+  author: Stauntonel
+  description: Aantekeningen van een linux liefhebber
+  DateFormat: 2006-01-02
+  showtoc: true
+  tocopen: false
+  homeInfoParams:
+    Title: Welkom
+    Content: Can be Info, links, about...
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.1
+    minMatchCharLength: 0
+    # limit: 10 # refer: https://www.fusejs.io/api/methods.html#search
+    keys: ["title", "permalink", "summary", "content"]
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON # necessary for search
+
