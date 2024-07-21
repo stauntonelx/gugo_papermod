@@ -1,2 +1,2 @@
-# gugo_papermod
+# hugo_papermod
 papermod hugo files
